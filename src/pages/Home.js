@@ -1,4 +1,5 @@
 import { Typography, Grid, Button } from '@mui/material'
+import { useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -10,6 +11,9 @@ import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 
 export default function Home() {
+    
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
     return (
         <div>
             <Header />
@@ -18,7 +22,7 @@ export default function Home() {
                     <Grid item xs={12} md={6} style={{
                         backgroundColor: "#ec0000",
                         color: "white",
-                        minHeight: "70vh"
+                        minHeight: isMobile ? "55vh" : "70vh"
                     }}>
                         <div style={{
                             display: "flex",
@@ -28,7 +32,7 @@ export default function Home() {
                             alignItem: "center",
                             justifyContent: "center"
                         }}>
-                            <Typography variant="h3" style={{
+                            <Typography variant={isMobile ? "h3" : "h3"} style={{
                                 margin: "auto 3vw",
                                 fontWeight: "bold"
                             }}>
@@ -73,7 +77,7 @@ export default function Home() {
                     </Grid>
 
                     <Grid item xs={12} md={6} style={{
-                        minHeight: "70vh"
+                        minHeight: isMobile ? "45vh" : "70vh"
                     }}>
                         <div style={{
                             backgroundImage: `url(${background})`,

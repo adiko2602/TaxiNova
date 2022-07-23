@@ -1,18 +1,21 @@
 import React from 'react'
 import Logo from '../images/logo.png'
 import { Typography, Button } from '@mui/material';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 export default function Footer() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <div style={{
       display: "flex",
       flexDirection: "row",
       backgroundColor: "#eeeeee",
       justifyContent: "space-between",
-      padding: "2rem"
+      padding: isMobile ? "1.5rem" : "2rem"
     }}>
 
       <div style={{
@@ -20,11 +23,11 @@ export default function Footer() {
         justifyContent: "start",
         alignItems: "center"
       }}>
-        <img src={Logo} alt="Logo" width="70px" />
+        <img src={Logo} alt="Logo" width={isMobile ? "50px" : "70px" } />
       </div>
       <div style={{
         marginTop: "2rem",
-        width: "40vw"
+        width: isMobile ? "25vw" : "40vw"
       }}>
       </div>
       <div style={{
@@ -51,7 +54,7 @@ export default function Footer() {
           alignItem: "center"
         }}>
           <FacebookIcon style={{
-            fontSize: "3rem"
+            fontSize: isMobile ? "2rem" : "3rem"
           }} />
         </Button>
         <Button onClick={() => {
@@ -65,7 +68,7 @@ export default function Footer() {
           alignItem: "center"
         }}>
           <WhatsAppIcon style={{
-            fontSize: "3rem"
+            fontSize: isMobile ? "2rem" : "3rem"
           }} />
         </Button>
       </div>
