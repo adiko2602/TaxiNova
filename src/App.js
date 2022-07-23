@@ -16,6 +16,10 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/price" element={<Price />} />
+          <Route path='/facebook' element={() => { 
+              window.location.href = 'https://www.facebook.com/Taxi-Nova-Legnica-112532474850139'; 
+              return null;
+          }}/>
         </Routes>
       </HashRouter>
     </div>

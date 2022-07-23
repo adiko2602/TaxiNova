@@ -18,7 +18,7 @@ export default function Contact() {
                     <Grid item xs={12} md={6} style={{
                         backgroundColor: "#ec0000",
                         color: "white",
-                        minHeight: "45vh"
+                        minHeight: isMobile ? "35vh" : "45vh"
                     }}>
                         <div style={{
                             display: "flex",
@@ -38,7 +38,7 @@ export default function Contact() {
                     </Grid>
 
                     <Grid item xs={12} md={6} style={{
-                        minHeight: "45vh"
+                        minHeight: isMobile ? "35vh" : "45vh"
                     }}>
                         <div style={{
                             backgroundImage: `url(${contact})`,
@@ -76,7 +76,7 @@ export default function Contact() {
                                     taxinovalegnica.reklamacje@gmail.com
                                 </div> :
                                 <div style={{
-                                    fontSize: "0.7em",
+                                    fontSize: "0.65em",
                                     fontWeight: 900,
                                     color: "#ec0000"
                                 }}>
@@ -109,7 +109,7 @@ export default function Contact() {
                                     taxinovalegnica.wspolpraca@gmail.com
                                 </div> :
                                 <div style={{
-                                    fontSize: "0.7em",
+                                    fontSize: "0.65em",
                                     fontWeight: 900,
                                     color: "#ec0000"
                                 }}>

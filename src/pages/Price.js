@@ -1,10 +1,14 @@
 import { Typography, Grid } from '@mui/material'
+import { useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import Header from '../components/Header'
 import price from '../images/price.jpg'
 import Footer from '../components/Footer'
 
 export default function Price() {
+    
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
     return (
 
         <div>
@@ -14,7 +18,7 @@ export default function Price() {
                     <Grid item xs={12} md={6} style={{
                         backgroundColor: "#ec0000",
                         color: "white",
-                        minHeight: "45vh"
+                        minHeight: isMobile ? "35vh" : "45vh"
                     }}>
                         <div style={{
                             display: "flex",
@@ -34,7 +38,7 @@ export default function Price() {
                     </Grid>
 
                     <Grid item xs={12} md={6} style={{
-                        minHeight: "45vh"
+                        minHeight: isMobile ? "35vh" : "45vh"
                     }}>
                         <div style={{
                             backgroundImage: `url(${price})`,
