@@ -1,21 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.95432441.css",
-    "main.js": "/static/js/main.9dbdbe44.js",
+    "main.js": "/static/js/main.1541140d.js",
     "static/media/background.jpg": "/static/media/background.f9c39a0aceb7f12b2498.jpg",
     "static/media/price.jpg": "/static/media/price.20c79b1bf0d2867964f8.jpg",
     "static/media/image001.jpg": "/static/media/image001.e1327a4b41df8736341f.jpg",
     "static/media/image002.jpg": "/static/media/image002.c781b2c97e73d17eb7db.jpg",
     "static/media/about.jpg": "/static/media/about.35466202c43758739642.jpg",
+    "static/media/smartphoneFull.png": "/static/media/smartphoneFull.30013a94962b37a4a4fd.png",
     "static/media/contact.jpg": "/static/media/contact.a7594f57a8ede2054785.jpg",
-    "static/media/smartphoneFull.png": "/static/media/smartphoneFull.585913d3adb73612fc2a.png",
+    "static/media/qrAndroid.svg": "/static/media/qrAndroid.a12592fac87bcdcb747c283732bf9139.svg",
+    "static/media/downloadAndroid.png": "/static/media/downloadAndroid.1973f1bfdbf5264830db.png",
     "static/media/logo.png": "/static/media/logo.f10934022fe0227c9e6a.png",
     "index.html": "/index.html",
     "main.95432441.css.map": "/static/css/main.95432441.css.map",
-    "main.9dbdbe44.js.map": "/static/js/main.9dbdbe44.js.map"
+    "main.1541140d.js.map": "/static/js/main.1541140d.js.map"
   },
   "entrypoints": [
     "static/css/main.95432441.css",
-    "static/js/main.9dbdbe44.js"
+    "static/js/main.1541140d.js"
   ]
 }
