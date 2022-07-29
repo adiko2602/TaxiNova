@@ -62,7 +62,7 @@ export default function Home() {
                                                     margin: "auto",
                                                     display: "flex"
                                                 }} href="https://play.google.com/store/apps/details?id=com.tiskel.tma.legnicanovataxi">
-                                                    <img width="100%" height="100%" src={downloadAndroid} alt="Pobierz aplikację Android" />
+                                                    <img width="138px" height="40px" src={downloadAndroid} alt="Pobierz aplikację Android" />
                                                 </Button>
                                             </>
                                             :
@@ -99,7 +99,7 @@ export default function Home() {
                                                                 marginBottom: "10px"
                                                             }} src={qrAndroid} alt="Kod QR Android" />
                                                             <Button href="https://play.google.com/store/apps/details?id=com.tiskel.tma.legnicanovataxi">
-                                                                <img src={downloadAndroid} alt="Pobierz aplikację Android" />
+                                                                <img width="138px" height="40px" src={downloadAndroid} alt="Pobierz aplikację Android" />
                                                             </Button>
                                                         </div>
                                                         <div style={{
