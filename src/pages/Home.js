@@ -8,12 +8,13 @@ import downloadAndroid from '../images/downloadAndroid.png'
 import smartphone from '../images/smartphoneFull.png';
 import LocalTaxiIcon from '@mui/icons-material/LocalTaxi';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
+import qrAndroid from '../images/qrAndroid.svg';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 
 export default function Home() {
-    
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("md"));
     return (
         <div>
             <Header />
@@ -22,9 +23,12 @@ export default function Home() {
                     <Grid item xs={12} md={6} style={{
                         backgroundColor: "#ec0000",
                         color: "white",
-                        minHeight: isMobile ? "55vh" : "70vh"
+                        minHeight: isMobile ? "55vh" : "80vh",
+                        height: "max-content"
                     }}>
                         <div style={{
+                            marginTop: "10vh",
+                            marginBottom: "5vh",
                             display: "flex",
                             flexDirection: "column",
                             height: "100%",
@@ -33,7 +37,7 @@ export default function Home() {
                             justifyContent: "center"
                         }}>
                             <Typography variant={isMobile ? "h3" : "h3"} style={{
-                                margin: "auto 3vw",
+                                margin: "auto 5vw",
                                 fontWeight: "bold"
                             }}>
                                 Nowa jakość podróżowania taksówką.
@@ -45,30 +49,67 @@ export default function Home() {
                                     alignItem: "center",
                                     width: "100%"
                                 }}>
-                                    <Typography variant="h6" align="center">
-                                        Pobierz aplikację <strong>Nova</strong>.
-                                    </Typography>
                                     <div style={{
                                         margin: "0 auto"
                                     }}>
-                                        { navigator.userAgent.indexOf("Android") !== -1 ? 
-                                        <Button href="/">
-                                            <img widht="85%" height="85%" src={downloadAndroid} alt="Pobierz aplikację Android" />
-                                        </Button> 
-                                            : 
-                                        navigator.userAgent.indexOf("like Mac") !== -1 ?
-                                        <Button href="/">
-                                            <img  widht="85%" height="85%" src={downloadAndroid} alt="Pobierz aplikację iOS" />
-                                        </Button> 
-                                            : 
+                                        {navigator.userAgent.indexOf("Android") !== -1 ?
                                             <>
-                                        <Button href="/">
-                                            <img widht="85%" height="85%" src={downloadAndroid} alt="Pobierz aplikację Android" />
-                                        </Button> 
-                                        <Button href="/">
-                                            <img  widht="85%" height="85%" src={downloadAndroid} alt="Pobierz aplikację iOS" />
-                                        </Button> 
+                                                <Typography variant="h6" align="center">
+                                                    Pobierz aplikację <strong>Nova</strong>.
+                                                </Typography>
+
+                                                <Button style={{
+                                                    margin: "auto",
+                                                    display: "flex"
+                                                }} href="https://play.google.com/store/apps/details?id=com.tiskel.tma.legnicanovataxi">
+                                                    <img width="100%" height="100%" src={downloadAndroid} alt="Pobierz aplikację Android" />
+                                                </Button>
                                             </>
+                                            :
+                                            navigator.userAgent.indexOf("like Mac") !== -1 ?
+                                                // <Button href="/">
+                                                //     <img src={downloadAndroid} alt="Pobierz aplikację iOS" />
+                                                // </Button> 
+                                                <Typography variant="h6" align="center">
+                                                    Niestety nasza aplikacja <strong>Nova</strong> do zamawiania na urządzenia z iOS jest wciąż w budowie.
+                                                    <br /><br />Wróć do nas za chwilę.
+                                                </Typography>
+                                                :
+                                                <>
+                                                    <Typography variant="h6" align="center">
+                                                        Pobierz aplikację <strong>Nova</strong> - zeskanuj kod QR.
+                                                    </Typography>
+
+                                                    <div style={{
+                                                        display: "flex",
+                                                        justifyContent: "space-between",
+                                                        margin: "20px 0px"
+                                                    }}>
+                                                        <div style={{
+                                                            display: "flex",
+                                                            flexDirection: "column",
+                                                            alignItem: "center",
+                                                            justifyContent: "space-between"
+                                                        }}>
+                                                            <img style={{
+                                                                padding: "5px",
+                                                                backgroundColor: "white",
+                                                                width: "150px",
+                                                                height: "150px",
+                                                                marginBottom: "10px"
+                                                            }} src={qrAndroid} alt="Kod QR Android" />
+                                                            <Button href="https://play.google.com/store/apps/details?id=com.tiskel.tma.legnicanovataxi">
+                                                                <img src={downloadAndroid} alt="Pobierz aplikację Android" />
+                                                            </Button>
+                                                        </div>
+                                                        <div style={{
+                                                            display: "flex",
+                                                            flexDirection: "column"
+                                                        }}>
+                                                            <div>  </div>
+                                                        </div>
+                                                    </div>
+                                                </>
                                         }
                                     </div>
                                 </div>
@@ -154,30 +195,30 @@ export default function Home() {
                         </Grid>
                     </Grid>
                 </div>
-                
+
                 <Grid container spacing={0} style={{
                     backgroundColor: "#ec0000",
                     padding: "1rem"
                 }}>
-                        <Grid item xs={12} md={6}>
-                            <div style={{
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                padding: "1rem"
-                            }}>
+                    <Grid item xs={12} md={6}>
+                        <div style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            padding: "1rem"
+                        }}>
                             <img src={smartphone} alt="Smartphone" />
-                            </div>
+                        </div>
 
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                            <div style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                flexDirection: "column",
-                                padding: "1rem",
-                                height: "100%"
-                            }}>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <div style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            flexDirection: "column",
+                            padding: "1rem",
+                            height: "100%"
+                        }}>
                             <Typography variant="h4" color="white">
                                 <strong>Zamów przejazd w naszej aplikacji!</strong>
                             </Typography>
@@ -186,11 +227,11 @@ export default function Home() {
                             }}>
                                 Wybierz miejsce odbioru, następnie miejsce docelowe i ciesz się przejazdem z naszym kierowcą.
                             </Typography>
-                            </div>
-
-                        </Grid>
+                        </div>
 
                     </Grid>
+
+                </Grid>
             </div>
             <Footer />
         </div>

@@ -61,7 +61,7 @@ export default function About() {
           <Typography variant="body1" style={{
             textAlign: "justify",
             textJustify: "inter-word",
-            fontSize: "1.5em"
+            fontSize: "1.2em"
           }}>
             Taxi <strong>Nova</strong> Legnica to firma obecnie prowadzona przez doświadczonych kierowców, 
             którą Grzegorz, Daniel, Dominik i Piotr postanowili reaktywować po {year} latach. <br /><br />
