@@ -95,12 +95,10 @@ export default function Home() {
                                                             <img style={{
                                                                 padding: "5px",
                                                                 backgroundColor: "white",
-                                                                width: "150px",
-                                                                height: "150px",
                                                                 marginBottom: "10px"
-                                                            }} src={qrAndroid} alt="Kod QR Android" />
-                                                            <Button href="https://play.google.com/store/apps/details?id=com.tiskel.tma.legnicanovataxi&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
-                                                            <img alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png' height="50"/>
+                                                            }} src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://play.google.com/store/apps/details?id=com.tiskel.tma.legnicanovataxi&choe=UTF-8&chld=M|0" alt="Kod QR Android" />
+                                                            <Button href="https://play.google.com/store/apps/details?id=com.tiskel.tma.legnicanovataxi">
+                                                            <img alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png' height="60"/>
                                                             </Button>
                                                         </div>
                                                         <div style={{
