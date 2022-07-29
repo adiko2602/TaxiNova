@@ -61,8 +61,9 @@ export default function Home() {
                                                 <Button style={{
                                                     margin: "auto",
                                                     display: "flex"
-                                                }} href="https://play.google.com/store/apps/details?id=com.tiskel.tma.legnicanovataxi">
-                                                    <img width="138px" height="40px" src={downloadAndroid} alt="Pobierz aplikację Android" />
+                                                }}  href="https://play.google.com/store/apps/details?id=com.tiskel.tma.legnicanovataxi&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+                                                    <img alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png' height="70"/>
+                                                    {/* <img width="138px" height="40px" src={downloadAndroid} alt="Pobierz aplikację Android" /> */}
                                                 </Button>
                                             </>
                                             :
@@ -98,8 +99,8 @@ export default function Home() {
                                                                 height: "150px",
                                                                 marginBottom: "10px"
                                                             }} src={qrAndroid} alt="Kod QR Android" />
-                                                            <Button href="https://play.google.com/store/apps/details?id=com.tiskel.tma.legnicanovataxi">
-                                                                <img width="138px" height="40px" src={downloadAndroid} alt="Pobierz aplikację Android" />
+                                                            <Button href="https://play.google.com/store/apps/details?id=com.tiskel.tma.legnicanovataxi&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+                                                            <img alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png' height="50"/>
                                                             </Button>
                                                         </div>
                                                         <div style={{
