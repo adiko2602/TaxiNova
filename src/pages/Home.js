@@ -9,6 +9,7 @@ import smartphone from '../images/smartphoneFull.png';
 import LocalTaxiIcon from '@mui/icons-material/LocalTaxi';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import qrAndroid from '../images/qrAndroid.svg';
+import downloadiOS from '../images/downloadiOS.svg';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 
 export default function Home() {
@@ -61,20 +62,24 @@ export default function Home() {
                                                 <Button style={{
                                                     margin: "auto",
                                                     display: "flex"
-                                                }}  href="https://play.google.com/store/apps/details?id=com.tiskel.tma.legnicanovataxi&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
-                                                    <img alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png' height="70"/>
-                                                    {/* <img width="138px" height="40px" src={downloadAndroid} alt="Pobierz aplikację Android" /> */}
+                                                }} href="https://play.google.com/store/apps/details?id=com.tiskel.tma.legnicanovataxi&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank">
+                                                    <img alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png' height="70" />
                                                 </Button>
                                             </>
                                             :
                                             navigator.userAgent.indexOf("like Mac") !== -1 ?
-                                                // <Button href="/">
-                                                //     <img src={downloadAndroid} alt="Pobierz aplikację iOS" />
-                                                // </Button> 
-                                                <Typography variant="h6" align="center">
-                                                    Niestety nasza aplikacja <strong>Nova</strong> do zamawiania na urządzenia z iOS jest wciąż w budowie.
-                                                    <br /><br />Wróć do nas za chwilę.
-                                                </Typography>
+                                                <>
+                                                    <Typography variant="h6" align="center">
+                                                        Pobierz aplikację <strong>Nova</strong>.
+                                                    </Typography>
+
+                                                    <Button style={{
+                                                        margin: "auto",
+                                                        display: "flex"
+                                                    }} href="https://apple.co/3d2RYps" target="_blank">
+                                                        <img style={{margin: "10px 0"}} alt='pobierz z App Store' src={downloadiOS} height="45" />
+                                                    </Button>
+                                                </>
                                                 :
                                                 <>
                                                     <Typography variant="h6" align="center">
@@ -95,17 +100,32 @@ export default function Home() {
                                                             <img style={{
                                                                 padding: "5px",
                                                                 backgroundColor: "white",
-                                                                marginBottom: "10px"
+                                                                marginBottom: "10px",
+                                                                width: "170px",
+                                                                height: "170px",
+                                                                marginRight: "10px"
                                                             }} src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://play.google.com/store/apps/details?id=com.tiskel.tma.legnicanovataxi&choe=UTF-8&chld=M|0" alt="Kod QR Android" />
-                                                            <Button href="https://play.google.com/store/apps/details?id=com.tiskel.tma.legnicanovataxi">
-                                                            <img alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png' height="60"/>
+                                                            <Button href="https://play.google.com/store/apps/details?id=com.tiskel.tma.legnicanovataxi" target="_blank">
+                                                                <img alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png' height="60" />
                                                             </Button>
                                                         </div>
                                                         <div style={{
                                                             display: "flex",
-                                                            flexDirection: "column"
+                                                            flexDirection: "column",
+                                                            alignItem: "center",
+                                                            justifyContent: "space-between"
                                                         }}>
-                                                            <div>  </div>
+                                                            <img style={{
+                                                                padding: "5px",
+                                                                backgroundColor: "white",
+                                                                marginBottom: "10px",
+                                                                width: "170px",
+                                                                height: "170px",
+                                                                marginLeft: "10px"
+                                                            }} src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://apple.co/3d2RYps&choe=UTF-8&chld=M|0" alt="Kod QR Android" />
+                                                            <Button href="https://apple.co/3d2RYps" target="_blank">
+                                                                <img style={{margin: "10px 0px"}} alt='pobierz z App Store' src={downloadiOS} />
+                                                            </Button>
                                                         </div>
                                                     </div>
                                                 </>
