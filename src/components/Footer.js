@@ -58,7 +58,7 @@ export default function Footer() {
           }} />
         </Button>
         <Button onClick={() => {
-          window.open('https://api.whatsapp.com/send?phone=48797258191', '_blank');
+          window.open('https://api.whatsapp.com/send?phone=48665624304', '_blank');
           return null
         }}  
          style={{
